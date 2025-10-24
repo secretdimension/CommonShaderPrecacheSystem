@@ -29,14 +29,14 @@ int32 UCommonShaderPrecacheSubsystem::GetNumPrecompilesRemaining() const
 	return FShaderPipelineCache::NumPrecompilesRemaining();
 }
 
-void UCommonShaderPrecacheSubsystem::SetDisabled(bool bInDisabled)
+void UCommonShaderPrecacheSubsystem::SetEnabled(bool bInEnabled)
 {
-	bDisabled = bInDisabled;
+	bEnabled = bInEnabled;
 }
 
 bool UCommonShaderPrecacheSubsystem::ShouldShowLoadingScreen(FString& OutReason) const
 {
-	if (bDisabled)
+	if (!bEnabled)
 	{
 		return false;
 	}

@@ -26,12 +26,12 @@ public:
 	virtual int32 GetNumPrecompilesRemaining() const;
 
 	/*
-	 * Set whether or not to override this subsystem and *not* hold the loading screen even if there are pre-compiles.
+	 * Set whether or not to disable this subsystem and *not* hold the loading screen even if there are pre-compiles.
 	 * This is useful if you are in an open-world scenario and don't want pre-compiles after the initial load-in.
 	 * OR you could leave this on and instead have your loading screen act as a way to detect shader hitches.
 	 */
 	UFUNCTION(BlueprintCallable)
-	virtual void SetDisabled(bool bInDisabled);
+	virtual void SetEnabled(bool bInEnabled);
 	
 	// ILoadingProcessInterface Begin
 	virtual bool ShouldShowLoadingScreen(FString& OutReason) const override;
@@ -40,5 +40,5 @@ public:
 protected:
 	// If true, this system will not hold the loading screen even if there are shader pre-compiles
 	UPROPERTY()
-	bool bDisabled = false;
+	bool bEnabled = true;
 };
