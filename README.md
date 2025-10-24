@@ -16,3 +16,12 @@ virtual int32 GetNumPrecompilesRemaining() const;
 UFUNCTION(BlueprintCallable)
 virtual void SetEnabled(bool bInEnabled);
 ```
+
+## Installation
+
+If you use Perforce for version control, it is suggested to use [p4submodule](https://github.com/secretdimension/p4submodule) to install and update this plugin.
+
+```console
+p4submodule create --remote github.com/secretdimension/CommonShaderPrecacheSystem <path/to/where/youd/like/the/plugin>
+p4submodule update <path/to/where/youd/like/the/plugin>
+```
