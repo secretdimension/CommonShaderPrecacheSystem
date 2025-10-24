@@ -1,0 +1,31 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "CommonShaderPrecacheSystem",
+	"Description": "A re-usable subsystem for managing shader precaching with CommonLoadingScreen",
+	"Category": "Other",
+	"CreatedBy": "Secret Dimension",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "CommonShaderPrecacheSystem",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+  "Plugins": 
+  [
+      {
+        "Name": "CommonLoadingScreen",
+        "Enabled": true
+      }
+  ]
+}
